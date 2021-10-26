@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>João Sereia - Atividade 02 - GitHub e DevOps</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+
+        main {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        table {
+            table-layout: fixed;
+            text-align: center;
+            margin-top: 2em;
+        }
+
+        td,
+        th {
+            padding: .4em;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>João Sereia</h1>
+        <h2>Extensão GitHub e DevOps</h2>
+    </main>
+
+    <script>
+        const main = document.querySelector("main");
+        const data = {
+            "Nome": "João",
+            "Sobrenome": "Sereia",
+            "Universidade": "Unisociesc",
+            "Campus": "Anita Garibaldi - Joinville - SC",
+            "Curso": "Ciência da Computação",
+            "RA": "122112337"
+        }
+
+        //tabela
+        const tabela = document.createElement("table");
+        const thead = document.createElement("thead");
+        const cabecalho = document.createElement("tr");
+        const tbody = document.createElement("tbody");
+        const corpo = document.createElement("tr");
+
+        for (let key in data) {
+            cabecalho.innerHTML += `<th>${key}</th>`;
+            corpo.innerHTML += `<td>${data[key]}</td>`
+        }
+
+        thead.appendChild(cabecalho);
+        tabela.appendChild(thead);
+        tbody.appendChild(corpo)
+        tabela.appendChild(tbody);
+
+        main.appendChild(tabela);
+
+
+    </script>
+</body>
+
+</html>
