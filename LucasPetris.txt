@@ -1,0 +1,2 @@
+String nomeAluno = "Lucas Diego Petris";
+int codRA = 152020288;
